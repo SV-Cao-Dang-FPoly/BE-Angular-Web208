@@ -43,11 +43,3 @@ export const checkPermission = async (req, res, next) => {
         });
     } catch (error) { }
 };
-
-// Bước 1: kiểm tra thông tin token gửi có không? Nếu không có thì thông báo cần phải đăng nhập
-// Bước 2: Lấy token bằng cách chuyển từ chuỗi sang mảng và lấy phần tử thứ 2
-// Bước 3: Kiểm tra token có hợp lệ không? Nếu không hợp lệ thì thông báo cần phải đăng nhập
-// Bước 4: Giải mã token và lấy ID, kiểm tra ID tồn tại trong db không?
-// Bước 5: Kiểm tra quyền của user có phải là admin không? Nếu không phải thì thông báo không có quyền truy cập tài nguyên
-// Bước 6: Nếu hợp lệ thì cho phép truy cập tài nguyên
-// Bước 7: Gắn middleware vào router nào cần check quyền
